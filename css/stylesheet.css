@@ -1,0 +1,39 @@
+*{
+}
+
+.container-fluid{
+  background: black;
+
+}
+.col{
+  background: black;
+}
+img{
+  height: 80%;
+  position: fixed;
+  float: left;
+  opacity: 50%;
+  
+  border-radius: 50%
+
+}
+
+#welcome-section {
+
+    padding-top: 0px;
+    margin-top: 0px;
+    display: block;
+    height: 100vh;
+}
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+@media screen and (max-width: 992px) {
+    body {
+      background-color: rgb(170, 170, 202);
+    }
+  }
