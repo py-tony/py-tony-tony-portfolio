@@ -1,39 +1,57 @@
-*{
+.container-fluid.bg-dark{
+  background-color: black !important;
 }
 
-.container-fluid{
-  background: black;
+.image-container img{
+  display: flex;
+  box-sizing: border-box;
+  border-radius: 50%;
 
+  border-radius: 50%;
+  
+  
 }
-.col{
-  background: black;
+
+.hero-mage {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("image/mypic.png");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 img{
-  height: 80%;
-  position: fixed;
-  float: left;
-  opacity: 50%;
-  
-  border-radius: 50%
-
+  animation-name: twinkle;
+  animation-duration: 180s;
 }
-
-#welcome-section {
-
-    padding-top: 0px;
-    margin-top: 0px;
-    display: block;
-    height: 100vh;
-}
-#navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-}
-@media screen and (max-width: 992px) {
-    body {
-      background-color: rgb(170, 170, 202);
-    }
+@keyframes twinkle {
+  20% {
+    transform: scale(0.2);
+    opacity: 0;
   }
+}
+.col-lg-6{
+  
+}
+.col-lg-6 h1{
+  position: absolute;
+  
+  top: 50%;
+  left: 50%
+}
+
+
+
+
+
+
+
+
+
+
+
