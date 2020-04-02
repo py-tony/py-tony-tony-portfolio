@@ -10,7 +10,7 @@
   animation-name: twinkle;
   animation-duration: 180s;
   align-content: center;
-  max-width: 120%;
+  max-width: 90%;
 }
 @keyframes twinkle {
   20% {
@@ -18,16 +18,27 @@
     opacity: 0;
   }
 }
-.col-lg-6{
-  border: 20px solid red;
+.row{
+  width: 80%;
 }
+/* .col-lg-6{
+  border: 20px solid red;
+} */
 
 .col-lg-6 h1{
   position: absolute;
   /* left: 20%;
   bottom: 50%; */
-  padding: 20%;
-  top: 10%;
+  padding: 30% 20%;
+}
+.col-md-6 h1{
+  position: absolute;
+  /* left: 20%;
+  bottom: 50%; */
+  padding: 30% 9%;
+}
+.col-md-6.mypic{
+  max-width: 1;
 }
 
 
