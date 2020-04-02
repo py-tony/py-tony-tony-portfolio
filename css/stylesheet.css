@@ -3,20 +3,33 @@
   background-color: black !important;
 }
 
+.btn-outline-success{
+  color: rgb(189, 191, 192) !important;
+  border-color: rgb(194, 200, 202) !important;
+  background: rgb(59, 55, 55);
+}
 
 
 .mypic{
   display: flex;
   animation-name: twinkle;
-  animation-duration: 180s;
+  animation: 5s twinkle infinite linear;
+  animation-duration: 90s;
   align-content: center;
   max-width: 90%;
+}
+.foo {
+  animation: 5s spinnow infinite linear;
 }
 @keyframes twinkle {
   20% {
     transform: scale(0.2);
     opacity: 0;
   }
+}
+.mypic:hover {
+  transform: scaleX(-1);
+
 }
 .row{
   width: 80%;
