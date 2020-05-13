@@ -65,7 +65,8 @@
 }
 @media only screen and (max-width: 600px) {
   .mypic {
-    padding-top: 100px;
+    padding-top: 150px;
+    padding-left: 120px;
     opacity: 0.2;
     position: relative;    
   }
