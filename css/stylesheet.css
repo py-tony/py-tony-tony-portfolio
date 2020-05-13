@@ -59,12 +59,13 @@
   .intro {
     z-index: 1000;
     position: relative;
-    font-size: 20px;
+    font-size: 26px;
     
   }
 }
 @media only screen and (max-width: 600px) {
   .mypic {
+    padding-top: 100px;
     opacity: 0.2;
     position: relative;    
   }
