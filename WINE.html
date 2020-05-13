@@ -13109,7 +13109,93 @@ div#notebook {
     });
     </script>
     <!-- End of mathjax configuration --></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/styleData.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Tony Portfolio</title>
+    <!-- because of the fixed header and navbar we 
+        gonna add some top margin to fill the space the header occupies  -->
+    <style>
+        body{
+            margin-top: 65px;
+            background:url("../image/fastfoodrestaurant.png");
+            background-repeat: repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            align-items: center;
+        }
+        header{
+          z-index: 1000;
+        }
+        .title{
+          text-align: center;
+          
+          color: rgb(34, 34, 34);
+          width: 86%;
+          padding-top: 5rem;
+          padding-left: 10%;
+          padding-right: 10%;
+          
+          height: 490px;
+          margin-left: 7%;
+          background: url("../image/wineGlass.jpg");
+          background-repeat: no-repeat;
+          background-size: 100%,100%;
+
+        }
+        .title h1{
+          font-size: 42px;
+          color:white;
+        }
+        .introduction{
+          padding-top: 15px;
+          padding-left: 15%;
+          padding-right: 15%;
+          padding-bottom: 20px;
+          background-color: white;
+          width: 86%;
+          margin-left: 7%;
+
+          
+        }
+        .introduction h2{
+          font-size: 28px;
+        }
+    </style>
+</head>
 <body>
+    <!-- this the script to query our standard header/navbar -->
+    <header id="headerr"></header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript">
+      $('#headerr').load('../headernav.html');
+    </script>
+    <!-- end header script -->
+    <div class="title">
+      <h1>
+        Data Analysis on Wine Data Sets with Python
+      </h1>
+    </div>
+    <br>
+    <br>
+    <div class="introduction">
+      <h2>
+        Introduction
+      </h2>
+      <br>
+      <h4>
+        The purpose of this project was to do preliminary exploration of wine data, with a goal of selecting right attributes for classifying wine into one of the quality categories: poor, normal and excellent. Since the data was already in tidy structure, not much attention was payed in data wrangling, but finding relationships among the attributes and between attributes and the wine quality.
+      </h4>
+      <br>
+      <h2>Loading The Data set</h2>
+      <br>
+      <h4>
+        Loading The Data set
+        The dataset “WINE.csv” Is a colection of . Since the data was already in tidy structure, no data wrangling was done on it, except adding the wine type column, removing the index variable X and randomizing the rows.
+      </h4>  
+    </div>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
