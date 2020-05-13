@@ -54,8 +54,21 @@
   max-width: 1;
 }
 
-
-
+/* hopage display on mobile device */
+@media only screen and (max-width: 600px) {
+  .intro {
+    z-index: 1000;
+    position: relative;
+    font-size: 20px;
+    
+  }
+}
+@media only screen and (max-width: 600px) {
+  .mypic {
+    opacity: 0.2;
+    position: relative;    
+  }
+}
 
 
 
