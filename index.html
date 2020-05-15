@@ -13,6 +13,16 @@
     .img{
         padding-top: 5%;
     }
+    html{
+        height: 100%;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+    
+    
 </style>
 <body>
     <div style="height: 100vh" class="bg-dark container-fluid">
@@ -26,7 +36,7 @@
     
         <div class="container-fluid text-light bg-dark">
             <div class="row">
-                <div class="middle-align my-con text-light col-lg-6 col-md-6 col-sm-12 col-xsm-12">                                          
+                <div class="middle-align text-light col-lg-6 col-md-6 col-sm-12 col-xsm-12">                                          
                     <h1 class="text-info intro">
                         Hi,<br> 
                         my Name is <br>
@@ -35,10 +45,11 @@
                             I'm the co-Founder of <a href="http://oceansofty.com/" target="_blank">OceanSofty</a>, coding mentor, junior Data Scientist,
                             Software Developer, and Web Designer.
                         </small> 
-                    </h1>                    
-                </div>
-                    
-                <div class="col-lg-6 col-md-6 col-sm-12 img col-xsm-12">
+                        <button class="btn btn-primary active" href="contact.html" role="button">Talk to me</button>
+                                                
+                    </h1>
+                </div> 
+                <div class="col-lg-6 col-md-6 col-sm-12 img col-xsm-12" >
                     <img src="image/contactBack.png" alt="" class="mypic">
                 </div>
             </div>
@@ -47,7 +58,7 @@
     </main>
 
     <!-- this the footer script  -->
-        <footer id="footer"></footer>
+        <footer id="footer" class="navbar-fixed-bottom"></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type="text/javascript">
     $('#footer').load('footer.html');

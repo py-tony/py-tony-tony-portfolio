@@ -54,19 +54,16 @@
 /* hopage display on mobile device */
 @media only screen and (max-width: 600px) {
   .intro {
-    z-index: 1000;
-    position: relative;
+       
     font-size: 26px;
     
   }
 }
 @media only screen and (max-width: 600px) {
   .img {
-    padding-top: 200px;
-    padding-left: 200px;
     
-    opacity: 0.4;
-        
+    opacity: 0.0;
+            
   }
 }
 
