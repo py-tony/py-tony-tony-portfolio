@@ -44,6 +44,9 @@
   bottom: 50%; */
   padding: 30% 20%;
 }
+.col-md-12.img{
+  opacity: 0.0;
+}
 .col-md-6 h1{
   position: absolute;
   /* left: 20%;
