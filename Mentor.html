@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: black">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Tony Portfolio</title>
+    <link href="../image/favicon.ico" rel="icon" type="image/x-icon" />
+</head>
+<style>
+    body, html {
+        height: 100%;
+        
+    }
+    input.form-control[type=text]:focus {
+  background-color: rgb(0, 0, 0) !important;
+  color: rgb(18, 247, 18);
+}
+    textarea.form-control[type=text]:focus {
+  background-color: rgb(0, 0, 0) !important;
+  color: rgb(10, 252, 43) !important;
+}
+
+    body.mb-4{
+        padding:50px;
+    }
+    .container-fluid{
+        background-image: url(../image/blackMan.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .row{
+        height: 100%;
+        padding-top: 5%;
+        
+    }
+    .text-info{
+        padding-top: 50%;
+        padding-right: 20%;
+    }
+
+    .contact-form-section{
+        padding-top: 10%;
+    }
+    .form-control{
+        box-shadow: 1px 1px 10px rgba(242, 243, 245, 1);
+    }
+    .md-textarea {
+        height: 200px !important;
+    }
+    .col-md-12{
+        opacity: 0.8;
+    }
+    
+    /* @media only screen and (max-width: 600px) {
+        .justify-content-around{
+            display: block !important;
+        }
+    } */
+    
+   
+</style>
+<body>
+    <div style="height: 100vh" class="bg-dark container-fluid">
+        <header id="header"></header>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript">
+          $('#header').load('headernav.html');
+        </script>
+    
+    <main class="my-main-section">
+        <div class="container-fluid text-light bg-dark">
+            <div class="row">
+                <div class="middle-align my-con my-info text-light col-lg-6 col-md-6 col-sm-12 col-xsm-12">                                          
+
+                    <h3 class="text-info intro">
+
+                           
+                            <!-- Howdy, I was expecting you here.
+                        <br>
+                        <br>
+                        <ul class="list-unstyled" style="color: rgb(13, 13, 63);">
+                            <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                                <p>11 baxter street, Bellville <br> Capetown South Africa</p>
+                            </li>
+
+                            <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                                <p>+ 243 8282 566 15</p>
+                            </li>
+
+                            <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                                <p>tony@oceansofty.com</p>
+                            </li>
+                        </ul> -->
+                        
+                    </h3>    
+                                    
+                </div>
+                    
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xsm-12" >
+                    <!--Section: Contact v.2-->
+                    <section class="mb-4 contact-form-section">
+
+                        <!--Section heading-->
+                        <h2 class="h1-responsive font-weight-bold text-muted text-center my-4">Get in Touch</h2>
+                        <!--Section description-->
+                        <p class="text-center text-muted w-responsive mx-auto mb-5">
+                            Howdy, Are you stuck? is your code being rude to you? let's team up. <br>
+                            Dial a <strong style="color: rgb(0, 255, 55);">Free</strong> Pyhon mentor by filling out the form and specify what you need help with and your prefered Communication method, we currently support Zoom and Discord. <br>
+                            Finding a reliable mentor never been this convenient, simple, and free
+                        </p>
+                        
+                        <div class="d-flex justify-content-around">
+                            <div class="p-2" style="color: rgb(0, 255, 55);">+243 8282 566 25</div>
+                            <div class="p-2" style="color: rgb(0, 255, 55);">
+                                tony@oceansofty.com
+                              <!-- Add font awesome icons -->
+                            </div>
+                            <div class="p-2" style="color: rgb(0, 255, 55);">
+                              <a href="#" class="fa fa-github" style="color: rgb(0, 255, 55);"></a>
+                              <a href="#" class="fa fa-linkedin" style="color: rgb(0, 255, 55);"></a>
+                              <a href="#" class="fa fa-twitter" style="color: rgb(0, 255, 55);"></a>
+                              <a href="#" class="fa fa-facebook" style="color: rgb(0, 255, 55);"></a>
+                            </div>
+                        </div>
+
+                        <!-- <div class="row"> -->
+
+                            <!--Grid column-->
+                            <!-- <div class="col-md-9 mb-md-0 mb-5"> -->
+                        <form id="form-mentor" name="contact" method="POST" netlify>
+
+                            <!--Grid row-->
+                            <div class="row text-muted" style="width: 100%;">
+
+                                <!--Grid column-->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="name" class="form-control bg-transparent">
+                                        <label for="name" class="text-muted">Your name</label>
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="email" name="email" class="form-control bg-transparent">
+                                        <label for="email" class="">Your email</label>
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+
+                            </div>
+                            <!--Grid row-->
+
+                            <!--Grid row-->
+                            <div class="row text-muted" style="width: 100%;">
+                                <div class="col-md-12">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="subject" name="subject" class="form-control bg-transparent">
+                                        <label for="subject" class="">Subject</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Grid row-->
+
+                            <!--Grid row-->
+                            <div class="row text-muted" style="width: 100%;">
+
+                                <!--Grid column-->
+                                <div class="col-md-12">
+
+                                    <div class="lg-form">
+                                        <textarea type="text" id="message" name="message" rows="2" class="form-control bg-transparent md-textarea"></textarea>
+                                        <label for="message">Your message</label>
+                                    </div>
+                                    
+
+                                </div>
+                                
+                            </div>
+                            <div class="row text-muted" style="width: 100%;">
+                                <div class="col-md-12">
+                                    <div class="md-form mb-0">
+                                        <input type="file" id="subject" name="" class="form-control bg-transparent">
+                                        <label for="subject" class="">uplaod file</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Grid row-->
+                            </p>
+                                <div data-netlify-recaptcha="true" style="background-color: black;" ></div>
+                            <p>
+                            <ul class="actions list-unstyled">
+                                <li>
+                                    <input type="submit" style="color: rgb(0, 255, 55);" value="send message" class="button active primary btn btn-primary btn-lg" >
+                                </li>
+                            </ul>
+                            
+                        </form>
+                        
+
+                        <!-- <div class="text-center text-lg-left action">
+                            <a class="btn btn-primary btn-lg action" type="submit" value="send message">Send to me</a>
+                        </div> -->
+                                <div class="status"></div>
+                            <!-- </div> -->
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <!-- <div class="col-md-3 text-center">
+                                <ul class="list-unstyled mb-0">
+                                    <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                                        <p>San Francisco, CA 94126, USA</p>
+                                    </li>
+
+                                    <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                                        <p>+ 01 234 567 89</p>
+                                    </li>
+
+                                    <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                                        <p>contact@mdbootstrap.com</p>
+                                    </li>
+                                </ul>
+                            </div> -->
+                            <!--Grid column-->
+
+                        <!-- </div> -->
+
+                    </section>
+                    <!--Section: Contact v.2-->
+                    <div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- this the footer script  -->
+        <footer id="footer"></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    $('#footer').load('footer.html');
+    </script>
+    <!-- end footer script -->
+
+    <div>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+    </div>
+</body>
+</html>
