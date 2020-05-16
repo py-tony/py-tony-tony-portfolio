@@ -112,7 +112,7 @@
 
                             <!--Grid column-->
                             <!-- <div class="col-md-9 mb-md-0 mb-5"> -->
-                        <form id="" name="contact-form" method="POST" data-netlify="true">
+                        <form id="" name="contact-form" method="POST" data-netlify="true" netlify>
 
                             <!--Grid row-->
                             <div class="row text-muted" style="width: 100%;">
@@ -168,7 +168,7 @@
                         </form>
                         <ul class="actions list-unstyled">
                             <li>
-                                <input type="submit" value="send message" class="button primary btn btn-primary btn-lg" >
+                                <input type="submit" value="send message" class="button active primary btn btn-primary btn-lg" >
                             </li>
                         </ul>
 
@@ -201,9 +201,23 @@
 
                     </section>
                     <!--Section: Contact v.2-->
+                    <div>
+                        
+                    </div>
                 </div>
             </div>
         </div>
+        <form name="contact" netlify>
+            <p>
+              <label>Name <input type="text" name="name" /></label>
+            </p>
+            <p>
+              <label>Email <input type="email" name="email" /></label>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
+          </form>
 
     </main>
 
