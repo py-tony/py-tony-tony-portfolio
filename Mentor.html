@@ -161,7 +161,7 @@ h2.my-animation-2-md {
                                 <!--Grid column-->
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
-                                        <input type="text" id="name" name="name" class="form-control bg-transparent">
+                                        <input type="text" id="name" name="name" class="form-control bg-transparent"  required style="color: rgb(16, 248, 8);">
                                         <label for="name" class="text-muted">Your name</label>
                                     </div>
                                 </div>
@@ -170,7 +170,7 @@ h2.my-animation-2-md {
                                 <!--Grid column-->
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
-                                        <input type="text" id="email" name="email" class="form-control bg-transparent">
+                                        <input type="email" id="email" name="email" class="form-control bg-transparent" required style="color: rgb(16, 248, 8);">
                                         <label for="email" class="">Your email</label>
                                     </div>
                                 </div>
@@ -183,7 +183,7 @@ h2.my-animation-2-md {
                             <div class="row text-muted" style="width: 100%;">
                                 <div class="col-md-12">
                                     <div class="md-form mb-0">
-                                        <input type="text" id="subject" name="subject" class="form-control bg-transparent">
+                                        <input type="text" id="subject" name="subject" class="form-control bg-transparent" required style="color: rgb(16, 248, 8);">
                                         <label for="subject" class="">Subject</label>
                                     </div>
                                 </div>
@@ -197,7 +197,7 @@ h2.my-animation-2-md {
                                 <div class="col-md-12">
 
                                     <div class="lg-form">
-                                        <textarea type="text" id="message" name="message" rows="2" class="form-control bg-transparent md-textarea"></textarea>
+                                        <textarea type="text" required id="message" name="message" rows="2" class="form-control bg-transparent md-textarea" style="color: rgb(16, 248, 8);"></textarea>
                                         <label for="message">Your message</label>
                                     </div>
                                     
@@ -209,13 +209,13 @@ h2.my-animation-2-md {
                                 <div class="col-md-12">
                                     <div class="md-form mb-0">
                                         <input type="file" id="subject" name="" class="form-control bg-transparent">
-                                        <label for="subject" class="">uplaod file</label>
+                                        <label for="subject" class="">uplaod file(optional)</label>
                                     </div>
                                 </div>
                             </div>
                             <!--Grid row-->
                             </p>
-                                <div data-netlify-recaptcha="true" style="background-color: black;" ></div>
+                                <div data-netlify-recaptcha="true" style="background-color: black;" required ></div>
                             <p>
                             <ul class="actions list-unstyled">
                                 <li>
