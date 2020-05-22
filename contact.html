@@ -51,6 +51,12 @@
             display: block !important;
         }
     } */
+    @media screen and (max-width: 480px) {
+  .contact-social {
+    flex: none !important;
+    display: block !important;
+  }
+    }
     
    
 </style>
@@ -103,19 +109,24 @@
                             Do you have any questions? Please do not hesitate to contact me directly. I will get back to you very shortly.
                         </p>
                         
-                        <div class="d-flex justify-content-around">
-                            <div class="p-2">+243 8282 566 25</div>
-                            <div class="p-2">
-                                tony@oceansofty.com
+                        <li class="d-flex contact-social justify-content-around">
+                            <ul class="p-2">
+                                <a href="tel:+243828256615">
+                                    <span class="glyphicon glyphicon-earphone" style="padding-left:10px; padding-right:10px;"></span>+243828256615
+                                </a>
+                            </ul>
+                            <ul class="p-2" >
+                                <a href="mailto:tony@oceansofty.com" target="_blank" >tony@oceansofty.com</a>
                               <!-- Add font awesome icons -->
-                            </div>
-                            <div class="p-2">
+                            </ul>
+                            <ul class="p-2">
                               <a href="https://github.com/py-tony" class="fa fa-github" target="_blank"></a>
-                              <a href="https://www.linkedin.com/in/tony-byamungu-51827412b/" target="_blank" class="fa fa-linkedin"></a>
-                              <a href="https://twitter.com/tony_isabellas" class="fa fa-twitter" target="_blank"></a>
-                              <a href="https://web.facebook.com/tony.byamungu/" class="fa fa-facebook" target="_blank"></a>
-                            </div>
-                        </div>
+                              <a href="https://www.linkedin.com/in/tony-byamungu-51827412b/" target="_blank" class="fa fa-linkedin" ></a>
+                              <a href="https://twitter.com/tony_isabellas" class="fa fa-twitter" target="_blank" ></a>
+                              <a href="https://web.facebook.com/tony.byamungu/" class="fa fa-facebook" target="_blank" ></a>
+                            </ul>
+                        </li>
+
 
                         <!-- <div class="row"> -->
 
