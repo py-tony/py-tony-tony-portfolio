@@ -109,23 +109,28 @@ h2.my-animation-2-md {
             display: block !important;
         }
     } */
-    .navbar {
-  background: none !important;
-}    
-   .page-footer{
-       background: none !important;
-   }
+     
    /* for phone email and social medial links */
    /* for phone email and social medial links */
    @media screen and (max-width: 480px) {
   .contact-social {
     flex: none !important;
     display: block !important;
-    border: 3px solid green;
+    
   }
   .carousel-caption{
-      height: 500px;
+      
+      height: 100%;    
+      position: static;
+      
+
   }
+  .container-fluid{
+        background-image: url(../image/blackMan.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
   
    }
 </style>
@@ -275,7 +280,7 @@ h2.my-animation-2-md {
                 </div>
                 
                 <div class="middle-align my-con my-info text-light col-lg-6 col-md-6 col-sm-12 col-xsm-12">                                          
-                    <br>
+                    
                    <!--Carousel Wrapper-->
                     <div id="carousel-example-2" class="carousel slide carousel" data-ride="carousel" data-interval="20000">
                         <!--Indicators-->
