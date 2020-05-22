@@ -114,7 +114,19 @@ h2.my-animation-2-md {
 }    
    .page-footer{
        background: none !important;
-   }  
+   }
+   /* for phone email and social medial links */
+   /* for phone email and social medial links */
+   @media screen and (max-width: 480px) {
+  .contact-social {
+    flex: none !important;
+    display: block !important;
+  }
+  .container-fluid{
+      background: none;
+  }
+  
+   }
 </style>
 <body>
 
@@ -140,19 +152,23 @@ h2.my-animation-2-md {
                             Finding a reliable mentor never been this convenient, simple, and free
                         </p>
                         
-                        <div class="d-flex justify-content-around">
-                            <div class="p-2" style="color: rgb(0, 255, 55);">+243 8282 566 25</div>
-                            <div class="p-2" style="color: rgb(0, 255, 55);">
-                                tony@oceansofty.com
+                        <li class="d-flex contact-social justify-content-around">
+                            <ul class="p-2" style="color: rgb(0, 255, 55);">
+                                <a href="tel:+243828256615" style="color:rgb(0, 255, 55)">
+                                    <span class="glyphicon glyphicon-earphone" style="padding-left:10px; padding-right:10px;"></span>+243828256615
+                                </a>
+                            </ul>
+                            <ul class="p-2" style="color: rgb(0, 255, 55);">
+                                <a href="mailto:tony@oceansofty.com" style="color: rgb(0, 255, 55);" target="_blank" >tony@oceansofty.com</a>
                               <!-- Add font awesome icons -->
-                            </div>
-                            <div class="p-2" style="color: rgb(0, 255, 55);">
+                            </ul>
+                            <ul class="p-2" style="color: rgb(0, 255, 55);">
                               <a href="https://github.com/py-tony" class="fa fa-github" target="_blank" style="color: rgb(0, 255, 55);"></a>
                               <a href="https://www.linkedin.com/in/tony-byamungu-51827412b/" target="_blank" class="fa fa-linkedin" style="color: rgb(0, 255, 55);"></a>
                               <a href="https://twitter.com/tony_isabellas" class="fa fa-twitter" target="_blank" style="color: rgb(0, 255, 55);"></a>
                               <a href="https://web.facebook.com/tony.byamungu/" class="fa fa-facebook" target="_blank" style="color: rgb(0, 255, 55);"></a>
-                            </div>
-                        </div>
+                            </ul>
+                        </li>
 
                         <!-- <div class="row"> -->
 
