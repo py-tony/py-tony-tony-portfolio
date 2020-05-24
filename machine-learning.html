@@ -4,227 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/styleData.css.css">
+    <link rel="stylesheet" href="css/styleData.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <title>Tony Portfolio</title>
+    <link href="../image/favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- because of the fixed header and navbar we 
+        gonna add some top margin to fill the space the header occupies  -->
+    <style>
+        body{
+            
+        }
+        .masthead{
+            background-image: url("../image/maxresdefault.jpg") !important;
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            padding-bottom: 15%;
+            min-height: 100%;
+            height: 100%;
+        }
+        .my-main-section{
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
-    <div style="height: 100vh" class="container-fluid">
-    <header>
-    <nav class="navbar border-bottom fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"><strong>TB</strong></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.html">About </a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Contact
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Email</a>
-                <a class="dropdown-item" href="#">Phone</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Schedule a meeting/a>
-                </div>
-            </li>
-  
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Data-Ninja
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="Untitled7.html">Data Analysis</a>
-                <a class="dropdown-item" href="#">Machine Learning</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" aria-disabled="true">AI Articles</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Software-Ninja
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search in my Life" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-        </nav>
-    </header>
+    <!-- this the script to query our standard header/navbar -->
+    <header id="header"></header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript">
+      $('#header').load('headernav.html');
+    </script>
+    <!-- end header script -->
     
-</header>
+    <main class="my-main-section">
+        <header class="masthead text-center text-white">
+            <div class="masthead-content">
+              <div class="container" style="padding-top: 10%; padding-bottom: 5%;">
+                <h1 class="masthead-heading mb-0" style="font-size: 5rem; margin-bottom: 50px;">Machine Learning</h1>
+                <h2 class="masthead-subheading mb-0" style="padding-top: 50px;">Artificial Inteligence</h2>
+                <!-- <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a> -->
+              </div>
+            </div>
+            <div class="bg-circle-1 bg-circle"></div>
+            <div class="bg-circle-2 bg-circle"></div>
+            <div class="bg-circle-3 bg-circle"></div>
+            <div class="bg-circle-4 bg-circle"></div>
+        </header>
+        <section>
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                  <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="../image/FourierOfPi.gif" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                  <div class="p-5">
+                    <h2 class="display-4">Linear Regression</h2>
+                    <p>
+                        Regression analysis is a statistical process used to estimate the relationships between the dependent variable and one or more independent variables. Regression analysis is mostly used for prediction and forecasting which overlaps with machine learning. In this task we will experiment some linear regression use case.
+                        <div></div><a href="../linearregression.html" class="btn btn-primary btn-xl rounded-pill mt-5">Open The Notebook</a></div>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="../image/FourierOfPi.gif" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="p-5">
+                    <h2 class="display-4">CLASSIFICATION MODELING</h2>
+                    <p>
+                        In this article we're going to do some experiment with Classifiers like Bagged, Random Forest and Boosted tree on the titanic dataset... and we're going to add some bonus on other form of classification...
+                        <div></div><a href="../classification.html" class="btn btn-primary btn-xl rounded-pill mt-5">Open The Notebook</a></div>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                  <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="../image/FourierOfPi.gif" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                  <div class="p-5">
+                    <h2 class="display-4">For those about to rock...</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
 
-<main role="main">
+    </main>
 
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1>Machine Learning and Artificial Inteligence</h1>
-      <p class="lead text-muted">
-        Although exploratory and explanatory visualizations have slightly different aims—to discover hidden patterns vs. to communicate insights and messages in the data—good exploratory visualizations explain what is going on and good explanatory visualizations let people explore the ideas
-      </p>
-      
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-4">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="width: 20rem;">
-                    <img src="image/FourierOfPi.gif" class="card-img-top" alt="Image of fast food wam">
-                    <div class="card-body">
-                      <h5 class="card-title">Data Analysis of Fast Food restaurant in the US</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="dataNotebooks/capston project III (1) (1).html" class="btn btn-primary">Open the Notebook</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="width: 20rem;">
-                    <img src="dataNotebooks/fastfood.jpg" class="card-img-top" alt="Image of fast food wam">
-                    <div class="card-body">
-                      <h5 class="card-title">Data Analysis of Fast Food restaurant in the US</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="dataNotebooks/capston project III (1) (1).html" class="btn btn-primary">Open the Notebook</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="width: 20rem;">
-                    <img src="dataNotebooks/fastfood.jpg" class="card-img-top" alt="Image of fast food wam">
-                    <div class="card-body">
-                      <h5 class="card-title">Data Analysis of Fast Food restaurant in the US</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="dataNotebooks/capston project III (1) (1).html" class="btn btn-primary">Open the Notebook</a>
-                    </div>
-                </div>
-            
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="width: 20rem;">
-                    <img src="dataNotebooks/fastfood.jpg" class="card-img-top" alt="Image of fast food wam">
-                    <div class="card-body">
-                      <h5 class="card-title">Data Analysis of Fast Food restaurant in the US</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="dataNotebooks/capston project III (1) (1).html" class="btn btn-primary">Open the Notebook</a>
-                    </div>
-                </div>
-            
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="width: 20rem;">
-                    <img src="dataNotebooks/fastfood.jpg" class="card-img-top" alt="Image of fast food wam">
-                    <div class="card-body">
-                      <h5 class="card-title">Data Analysis of Fast Food restaurant in the US</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="dataNotebooks/capston project III (1) (1).html" class="btn btn-primary">Open the Notebook</a>
-                    </div>
-                </div>
-            
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="width: 20rem;">
-                    <img src="dataNotebooks/fastfood.jpg" class="card-img-top" alt="Image of fast food wam">
-                    <div class="card-body">
-                      <h5 class="card-title">Data Analysis of Fast Food restaurant in the US</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="dataNotebooks/capston project III (1) (1).html" class="btn btn-primary">Open the Notebook</a>
-                    </div>
-                </div>
-            
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="width: 20rem;">
-                    <img src="dataNotebooks/fastfood.jpg" class="card-img-top" alt="Image of fast food wam">
-                    <div class="card-body">
-                      <h5 class="card-title">Data Analysis of Fast Food restaurant in the US</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="dataNotebooks/capston project III (1) (1).html" class="btn btn-primary">Open the Notebook</a>
-                    </div>
-                </div>
-            
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="width: 20rem;">
-                    <img src="dataNotebooks/fastfood.jpg" class="card-img-top" alt="Image of fast food wam">
-                    <div class="card-body">
-                      <h5 class="card-title">Data Analysis of Fast Food restaurant in the US</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="dataNotebooks/capston project III (1) (1).html" class="btn btn-primary">Open the Notebook</a>
-                    </div>
-                </div>
-            
-            </div>
-        </div>
-        <br>
-        <div class="col-md-4">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="width: 20rem;">
-                    <img src="dataNotebooks/fastfood.jpg" class="card-img-top" alt="Image of fast food wam">
-                    <div class="card-body">
-                      <h5 class="card-title">Data Analysis of Fast Food restaurant in the US</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="dataNotebooks/capston project III (1) (1).html" class="btn btn-primary">Open the Notebook</a>
-                    </div>
-                </div>
-            
-            </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</main>
-    <!-- Footer -->
-    <footer class="page-footer border-top fixed-bottom bg-dark font-small blue">
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-          <a href="https://oceansofty.com/">PortFolio@Tony Byamungu powered by oceansofty</a>
-        </div>
-        <!-- Copyright -->
-      
-    </footer>
-    <!-- Footer -->
+<!-- footer script -->
+<footer id="footer"></footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+  $('#footer').load('footer.html');
+</script>
+<!-- end footer script -->
+<div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en" style="background-color: black">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styleData.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Tony Portfolio</title>
+    <link href="../image/favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- because of the fixed header and navbar we 
+        gonna add some top margin to fill the space the header occupies  -->
+    <style>
+        body{
+            margin-top: 65px;
+        }
+    </style>
+</head>
+<body>
+    <!-- this the script to query our standard header/navbar -->
+    <header id="header"></header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript">
+      $('#header').load('headernav.html');
+    </script>
+    <!-- end header script -->
     
-        
-    </div>
+    <main class="my-main-section">
+        <div class="container-fluid text-light bg-dark">
+            <div class="row position-fixed">
+                <div class="middle-align my-con text-light col-lg-6 col-md-6 col-sm-6 col-xsm-6">                                          
+                    <h1 class="text-info">
+                        Hi,<br> 
+                        my Name is <br>
+                        <div class="text-light">Tony Byamungu</div>
+                        <small class="text-muted">
+                            I'm a junior Data Scientist,
+                            Software Developer, and Web Designer.
+                        </small> 
+                    </h1>                    
+                </div>
+                    
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xsm-6">
+                    <img src="image/mypic3.png" alt="" class="mypic">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+<!-- footer script -->
+<footer id="footer"></footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+  $('#footer').load('footer.html');
+</script>
+<!-- end footer script -->
+<div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
