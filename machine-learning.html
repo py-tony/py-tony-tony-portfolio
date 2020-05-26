@@ -12,17 +12,19 @@
     <!-- because of the fixed header and navbar we 
         gonna add some top margin to fill the space the header occupies  -->
     <style>
-        body{
-            
-        }
+        
         .jumbotron{
-            background-image: url("../image/machin.png") !important;
+          
+            background-image: linear-gradient(rgba(31, 30, 30, 0.856), rgba(15, 15, 15, 0)), url("../image/machin.png") !important;
             background-size: cover;
             background-attachment: fixed;
             background-repeat: no-repeat;
             /* padding-bottom: 15%;
             min-height: 100%;
             height: 100vp; */
+        }
+        .col-lg-6{
+          color: rgb(118, 148, 202) !important;
         }
         .my-main-section{
             background-color: black;
@@ -50,7 +52,12 @@
             <div class="masthead-content">
               <div class="container" style="padding-top: 10%; padding-bottom: 5%;">
                 <h1 class="masthead-heading mb-0" style="font-size: 5rem; margin-bottom: 50px;">Machine Learning</h1>
-                <h2 class="masthead-subheading mb-0" style="padding-top: 50px;">Artificial Inteligence</h2>
+                <h2 class="masthead-subheading mb-0" style="padding-top: 50px;">The use of machine learning techniques has reached into industries as diverse as
+                  self-driving cars and financial forecasting. In fact, it is very likely that you already
+                  make use of machine learning on a daily basis. For example if you have used
+                  Google Maps for suggesting a traffic route, used Amazon to make an online
+                  purchase or communicated with your friends online via Facebook you have
+                  already interacted with machine learning.</h2>
                 <!-- <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a> -->
               </div>
             </div>
@@ -60,11 +67,33 @@
             <div class="bg-circle-4 bg-circle"></div>
         </header>
         <section>
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6 order-lg-2  jumbotron">
+                <div class="p-5">
+                  <a href="rnn.html"><img class="img-fluid rounded-circle" src="../image/quantum.gif" alt=""></a>
+                </div>
+              </div>
+              <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                  <h2 class="display-4">Recurrent Neural Networks</h2>
+                  <p>
+                    This Article is about a basic form of Natural Language Processing (NLP)
+                    called Sentiment Analysis . For this task we are going to use a recurrent neural
+                    network in Keras to try and classify a movie review as either positive or negative.
+                      <div></div><a href="../rnn.html" class="btn btn-primary btn-xl rounded-pill mt-5">Open The Notebook</a></div>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+        <section>
             <div class="container">
               <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-2  jumbotron">
                   <div class="p-5">
-                    <img class="img-fluid rounded-circle" src="../image/FourierOfPi.gif" alt="">
+                    <a href="linearregression.html"><img class="img-fluid rounded-circle" src="../image/FourierOfPi.gif" alt=""></a>
                   </div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
@@ -84,15 +113,15 @@
             <div class="row align-items-center">
               <div class="col-lg-6 order-lg-2  jumbotron">
                 <div class="p-5">
-                  <img class="img-fluid rounded-circle" src="../image/nnimage.gif" alt="">
+                  <a href="nnkeras.html"><img class="img-fluid rounded-circle" src="../image/nnimage.gif" alt=""></a>
                 </div>
               </div>
               <div class="col-lg-6 order-lg-1">
                 <div class="p-5">
                   <h2 class="display-4">Neural Network</h2>
                   <p>
-                      Regression analysis is a statistical process used to estimate the relationships between the dependent variable and one or more independent variables. Regression analysis is mostly used for prediction and forecasting which overlaps with machine learning. In this task we will experiment some linear regression use case.
-                      <div></div><a href="../linearregression.html" class="btn btn-primary btn-xl rounded-pill mt-5">Open The Notebook</a></div>
+                    In this notebook we will use a neural network to predict diabetes using the Pima Diabetes Dataset. We will start by training a Random Forest to get a performance baseline. Then we will use the Keras package to quickly build and train a neural network and compare the performance. We will see how different network structures affect the performance, training time, and level of overfitting (or underfitting).
+                      <div></div><a href="../nnkeras.html" class="btn btn-primary btn-xl rounded-pill mt-5">Open The Notebook</a></div>
                   </p>
                 </div>
               </div>
@@ -104,7 +133,7 @@
             <div class="row align-items-center">
               <div class="col-lg-6 order-lg-2  jumbotron">
                 <div class="p-5">
-                  <img class="img-fluid rounded-circle" src="../image/FourierOfPi.gif" alt="">
+                  <a href="classification.html"><img class="img-fluid rounded-circle" src="../image/quantum.gif" alt=""></a>
                 </div>
               </div>
               <div class="col-lg-6 order-lg-1">
@@ -119,109 +148,29 @@
             </div>
           </div>
       </section>
-        <section>
-            <div class="container">
-              <div class="row align-items-center">
-                <div class="col-lg-6 order-lg-2 jambotron">
-                  <div class="p-5">
-                    <img class="img-fluid rounded-circle" src="../image/nnimage.gif" alt="">
-                  </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                  <div class="p-5">
-                    <h2 class="display-4">Neural Network</h2>
-                    <p>
-                      In this notebook we will use a neural network to predict diabetes using the Pima Diabetes Dataset. We will start by training a Random Forest to get a performance baseline. Then we will use the Keras package to quickly build and train a neural network and compare the performance. We will see how different network structures affect the performance, training time, and level of overfitting (or underfitting).
-                      <div></div><a href="../nnkeras.html" class="btn btn-primary btn-xl rounded-pill mt-5">Open The Notebook</a></div>
-                    </p>
-                  </div>
-                </div>
+      <section>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2  jumbotron">
+              <div class="p-5">
+                <a href="cnn.html"><img class="img-fluid rounded-circle" src="../image/quantum.gif" alt=""></a>
               </div>
             </div>
-        </section>
-        <section>
-            <div class="container">
-              <div class="row align-items-center">
-                <div class="col-lg-6 order-lg-2 jambotron">
-                  <div class="p-5">
-                    <img class="img-fluid rounded-circle" src="../image/FourierOfPi.gif" alt="">
-                  </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                  <div class="p-5">
-                    <h2 class="display-4">For those about to rock...</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
-                  </div>
-                </div>
+            <div class="col-lg-6 order-lg-1">
+              <div class="p-5">
+                <h2 class="display-4">Convolutional Neural Network</h2>
+                  <p>
+                    In this Notebook we will cover the basics of convolutional neural networks, or "ConvNets".
+                    ConvNets were invented in the late 1980s/early 1990s, and have had tremendous
+                    success especially with vision although they have also been used very successfully
+                    in speech processing pipelines, and more recently, for machine translation.
+                      <div></div><a href="../cnn.html" class="btn btn-primary btn-xl rounded-pill mt-5">Open The Notebook</a></div>
+                  </p>
               </div>
             </div>
-        </section>
-
-    </main>
-
-<!-- footer script -->
-<footer id="footer"></footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript">
-  $('#footer').load('footer.html');
-</script>
-<!-- end footer script -->
-<div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
-</div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en" style="background-color: black">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/styleData.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <title>Tony Portfolio</title>
-    <link href="../image/favicon.ico" rel="icon" type="image/x-icon" />
-    <!-- because of the fixed header and navbar we 
-        gonna add some top margin to fill the space the header occupies  -->
-    <style>
-        body{
-            margin-top: 65px;
-        }
-    </style>
-</head>
-<body>
-    <!-- this the script to query our standard header/navbar -->
-    <header id="header"></header>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script type="text/javascript">
-      $('#header').load('headernav.html');
-    </script>
-    <!-- end header script -->
-    
-    <main class="my-main-section">
-        <div class="container-fluid text-light bg-dark">
-            <div class="row position-fixed">
-                <div class="middle-align my-con text-light col-lg-6 col-md-6 col-sm-6 col-xsm-6">                                          
-                    <h1 class="text-info">
-                        Hi,<br> 
-                        my Name is <br>
-                        <div class="text-light">Tony Byamungu</div>
-                        <small class="text-muted">
-                            I'm a junior Data Scientist,
-                            Software Developer, and Web Designer.
-                        </small> 
-                    </h1>                    
-                </div>
-                    
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xsm-6">
-                    <img src="image/mypic3.png" alt="" class="mypic">
-                </div>
-            </div>
+          </div>
         </div>
-
+      </section>
     </main>
 
 <!-- footer script -->
