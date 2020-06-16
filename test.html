@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: black">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script src="js/mentor.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Mentor Bank</title>
+    <link href="../image/favicon.ico" rel="icon" type="image/x-icon" />
+</head>
+<style>
+    body, html {
+        height: 100%;
+        
+    }
+    input.form-control[type=text]:focus {
+  background-color: rgb(0, 0, 0) !important;
+  color: rgb(18, 247, 18);
+}
+    textarea.form-control[type=text]:focus {
+  background-color: rgb(0, 0, 0) !important;
+  color: rgb(10, 252, 43) !important;
+}
+    body.mb-4{
+        padding:50px;
+    }
+    .container-fluid{
+        background-image: url(../image/blackMan.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .row{
+        height: 100%;
+        padding-top: 5%;
+        
+    }
+    .text-info{
+        padding-top: 50%;
+        padding-right: 20%;
+    }
+    .contact-form-section{
+        padding-top: 10%;
+    }
+    .form-control{
+        box-shadow: 1px 1px 10px rgba(242, 243, 245, 1);
+    }
+    .md-textarea {
+        height: 200px !important;
+    }
+    .col-md-12{
+        opacity: 0.8;
+    }
+    .d-block{
+        opacity: 0.0 !important;
+    }
+    /* this style is for live test animation
+     */
+    
+.output {
+  text-align:center;
+  font-family: 'Source Code Pro', monospace;
+  color:white;
+  
+}
+/* Cursor Styling */
+body{
+  font-family: 'Raleway', sans-serif;
+  
+  font-size: 18px;
+  background-color: black;
+  
+  
+}
+h1.my-animation-2,h2 {
+  font-weight: 200;
+  margin: 0.4em 0;
+}
+h1.my-animation-2 { font-size: 1.5em; }
+h2.my-animation-2-md {
+  
+  font-size: 2em;
+}
+.my-main-section{
+    padding-left: 5%;
+}
+  
+  
+   /* for phone email and social medial links */
+   /* for phone email and social medial links */
+   @media screen and (max-width: 480px) {
+  .contact-social {
+    flex: none !important;
+    display: block !important;
+    
+  }
+  .carousel-caption{
+      
+      height: 100%;    
+      position: static;
+      
+  }
+  /* .container-fluid{
+        background-image: url(../image/blackManMob.jpg);
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-attachment: fixed !important;
+    } */
+    .my-main-section{
+        margin-top: 100px;
+    }
+  
+   }
+</style>
+<body>
+        <header id="header"></header>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript">
+          $('#header').load('headernav.html');
+        </script>
+    
+    <main class="my-main-section">
+        <div class="container-fluid jambotron text-light bg-dark">
+            <div class="row">                    
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xsm-12 jambotron" >
+                    <!--Section: Contact v.2-->
+                    <section class="mb-4 contact-form-section">
+                        
+                        <!--Section heading-->
+                        <h2 class="h1-responsive font-weight-bold text-muted text-center my-4">Python Bank</h2>
+                        <!--Section description-->
+                        <p class="text-center text-muted w-responsive mx-auto mb-5">
+                            Howdy, Are you stuck? is your code being rude to you? or you're looking for reliable courses and resources to learn python in any case you've just hit the Jackpot. let's team up!
+                            Dial a <strong style="color: rgb(0, 255, 55);">Free</strong> Pyhon mentor or ask if we're supporting a particular language by filling out the form and specify what you need help with and your prefered Communication method, we currently support Zoom and Discord for live help sessions, and repl.it and discord for your code review.<br>
+                            Finding a reliable mentor never been this convenient, simple, and free
+                        </p>
+                        
+                        <li class="d-flex contact-social justify-content-around">
+                            <ul class="p-2" style="color: rgb(0, 255, 55);">
+                                <a href="tel:+243828256615" style="color:rgb(0, 255, 55)">
+                                    <span class="glyphicon glyphicon-earphone" style="padding-left:10px; padding-right:10px;"></span>+243828256615
+                                </a>
+                            </ul>
+                            <ul class="p-2" style="color: rgb(0, 255, 55);">
+                                <a href="mailto:tony@oceansofty.com" style="color: rgb(0, 255, 55);" target="_blank" >tony@oceansofty.com</a>
+                              <!-- Add font awesome icons -->
+                            </ul>
+                            <ul class="p-2" style="color: rgb(0, 255, 55);">
+                              <a href="https://github.com/py-tony" class="fa fa-github" target="_blank" style="color: rgb(0, 255, 55);"></a>
+                              <a href="https://www.linkedin.com/in/tony-byamungu-51827412b/" target="_blank" class="fa fa-linkedin" style="color: rgb(0, 255, 55);"></a>
+                              <a href="https://twitter.com/tony_isabellas" class="fa fa-twitter" target="_blank" style="color: rgb(0, 255, 55);"></a>
+                              <a href="https://web.facebook.com/tony.byamungu/" class="fa fa-facebook" target="_blank" style="color: rgb(0, 255, 55);"></a>
+                            </ul>
+                        </li>
+                        <!-- <div class="row"> -->
+
+                            <!--Grid column-->
+                            <!-- <div class="col-md-9 mb-md-0 mb-5"> -->
+                        <form id="form-mentor" name="contact" method="POST" netlify>
+                        <form id="form-mentor" name="contact" method="POST" netlify data-netlify="true">
+
+                            <!--Grid row-->
+                            <div class="row text-muted" style="width: 100%;">
+                                <!--Grid column-->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="name" class="form-control bg-transparent"  required style="color: rgb(16, 248, 8);">
+                                        <label for="name" class="text-muted">Your name</label>
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+                                <!--Grid column-->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="email" id="email" name="email" class="form-control bg-transparent" required style="color: rgb(16, 248, 8);">
+                                        <label for="email" class="">Your email</label>
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+                            </div>
+                            <!--Grid row-->
+                            <!--Grid row-->
+                            <div class="row text-muted" style="width: 100%;">
+                                <div class="col-md-12">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="subject" name="subject" class="form-control bg-transparent" required style="color: rgb(16, 248, 8);">
+                                        <label for="subject" class="">Subject</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Grid row-->
+                            <!--Grid row-->
+                            <div class="row text-muted" style="width: 100%;">
+                                <!--Grid column-->
+                                <div class="col-md-12">
+                                    <div class="lg-form">
+                                        <textarea type="text" required id="message" name="message" rows="2" class="form-control bg-transparent md-textarea" style="color: rgb(16, 248, 8);" required></textarea>
+                                        <label for="message">Your message</label>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            <div class="row text-muted" style="width: 100%;">
+                                <!--Grid column-->
+                                <div class="col-md-12">
+                                    <div class="lg-form date">
+                                        <input type="datetime-local" id="meeting-time"
+                                        name="meeting-time" value="2018-06-12T19:30"
+                                        min="2020-01-05T00:00" max="2021-06-14T00:00" placeholder="mm/dd/yyy" class="form-control bg-transparent" style="color: rgb(16, 248, 8);" required>
+                                        <label for="meeting-time">Choose a time for your appointment mm/dd/yyy:  </label>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row text-muted" style="width: 100%;">
+                                <div class="col-md-12">
+                                    <div class="md-form mb-0">
+                                        <input type="file" id="myfile" name="myfile" class="form-control bg-transparent">
+                                        <label for="myfile" class="">uplaod file(optional)</label>
+                                        <label for="myfile">uplaod file(optional)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Grid row-->
+                            </p>
+                                <div data-netlify-recaptcha="true" required ></div>
+                            <p>
+                            <ul class="actions list-unstyled">
+                                <li>
+                                    <input type="submit" style="color: rgb(0, 255, 55);" value="send message" class="button active primary btn btn-primary btn-lg" >
+                                </li>
+                            </ul>
+                            
+                        </form>
+                        
+                        
+                    </section>
+                    <!--Section: Contact v.2-->
+                    <div>
+                        
+                    </div>
+                </div>
+                
+                <div class="middle-align my-con my-info text-light jambotron col-lg-6 col-md-6 col-sm-12 col-xsm-12">                                          
+                    
+                   <!--Carousel Wrapper-->
+                    <div id="carousel-example-2" class="carousel slide carousel" data-ride="carousel" data-interval="20000">
+                        <!--Indicators-->
+                        <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-2" data-slide-to="2"></li>
+                        </ol>
+                        <!--/.Indicators-->
+                        <!--Slides-->
+                        <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="view">
+                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+                                alt="First slide">
+                            <div class="mask rgba-black-light"></div>
+                            </div>
+                            <div class="carousel-caption">
+                                <p class="container py-5" style="padding-left: 10%;">                                    
+                                    <h3 class="h3-responsive">Martin Fowler</h3>                
+                                    <h4 my-animation-2 style="color: rgb(4, 250, 37);">                                                   
+                                    <span
+                                        style="color: rgb(4, 250, 37);"
+                                        class="txt-rotate"
+                                        data-period="2000"
+                                        data-rotate='[ "“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”"]'></span>
+                                    </h4>                           
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <!--Mask color-->
+                            <div class="view">
+                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+                                alt="Second slide">
+                            <div class="mask rgba-black-strong"></div>
+                            </div>
+                            <div class="carousel-caption">
+                                
+                                <p class="container py-5" style="padding-left: 10%;">
+                                    
+                                        <h3 class="h3-responsive">Martin Golding</h3>
+                        
+                                        <h4 my-animation-2 style="color: rgb(4, 250, 37);">
+                                                           
+                                        <span
+                                            style="color: rgb(4, 250, 37);"
+                                            class="txt-rotate"
+                                            data-period="2000"
+                                            data-rotate='[ "“Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.”"]'></span>
+                                        </h4>
+                                        
+                                
+                                </p>
+                            
+                            
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <!--Mask color-->
+                            <div class="view">
+                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+                                alt="Second slide">
+                            <div class="mask rgba-black-strong"></div>
+                            </div>
+                            <div class="carousel-caption">
+                                
+                                <p class="container py-5" style="padding-left: 10%;">
+                                    
+                                        <h3 class="h3-responsive">pyTony</h3>
+                        
+                                        <h4 my-animation-2 style="color: rgb(4, 250, 37);">
+                                                           
+                                        <span
+                                            style="color: rgb(4, 250, 37);"
+                                            class="txt-rotate"
+                                            data-period="2000"
+                                            data-rotate='[ "“Frustration never fixed a Bug, Keep calm and Google it”"]'></span>
+                                        </h4>
+                                        
+                                
+                                </p>
+                            
+                            
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <!--Mask color-->
+                            <div class="view">
+                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+                                alt="Third slide">
+                            <div class="mask rgba-black-slight"></div>
+                            </div>
+                            <div class="carousel-caption">
+                                <p class="container py-5" style="padding-left: 10%;">                                    
+                                    <h3 class="h3-responsive">Dan Salomon</h3>                
+                                    <h4 my-animation-2 style="color: rgb(4, 250, 37);">                                                   
+                                    <span
+                                        style="color: rgb(4, 250, 37);"
+                                        class="txt-rotate"
+                                        data-period="2000"
+                                        data-rotate='[ "“Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday’s code.”"]'></span>
+                                    </h4>                           
+                                </p>
+                            </div>
+                        </div>
+                        </div>
+                        <!--/.Slides-->
+                        <!--Controls-->
+                        <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                        </a>
+                        <!--/.Controls-->
+                    </div>
+                    <!--/.Carousel Wrapper-->    
+                    <!-- <div class="container py-5" style="padding-left: 20%;" >
+                        
+                        <h4 my-animation-2 style="color: rgb(4, 250, 37);">
+                            import socket <br>
+                            <span style="color: blue;">def</span> <span style="color: white;">portScan</span>(): <br>
+                        <span
+                            style="color: rgb(4, 250, 37);"
+                            class="txt-rotate"
+                            data-period="2000"
+                            data-rotate='[ "____parser = optParser()", "____if port is not None:", "____if port ", "___print(msg)", "Ethical hacking", "is", "pretty.", "fun!" ]'></span>
+                        </h4>
+                        
+                        
+                    </div> -->
+                    <div class="container py-5" style="padding-left: 5%;" >
+                        <h2>Try it live in the Editor below</h2>
+                        
+                            <ul style="color: rgb(4, 250, 37);">
+                                <ol>1. Delete the existing code</ol>
+                                <ol>2. Write or copy/paste your code</ol>
+                                <ol>3. Click the run button on top of the editor (the green button)</ol>
+                                <ol>4. See your result in the dark box</ol>
+                            </ul>
+                        
+                        <iframe frameborder="0" width="100%" class="repl" height="500px" src="https://repl.it/@pytony/test?lite=true" style="background-color: black;"></iframe>
+                    </div>
+                                    
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- this the footer script  -->
+        <footer id="footer"></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    $('#footer').load('footer.html');
+    </script>
+    <!-- end footer script -->
+    <div>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+    </div>
+</body>
+</html>
