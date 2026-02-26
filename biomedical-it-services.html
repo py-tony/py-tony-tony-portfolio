@@ -23,12 +23,6 @@
             background: linear-gradient(135deg, #3b9194 0%, #1e4d4f 100%);
         }
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
         .service-card:active {
             transform: scale(0.98);
         }
@@ -41,21 +35,40 @@
         }
 
         .logo-img {
-            height: 42px;
+            height: 60px;
             width: auto;
             object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 50px;
+            }
         }
 
         .profile-border {
             border: 6px solid rgba(255, 255, 255, 0.3);
         }
 
-        /* Mobile Menu Toggle Logic */
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
         #mobile-menu {
             display: none;
         }
         #mobile-menu.active {
             display: flex;
+        }
+
+        .plan-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .plan-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(59, 145, 148, 0.1), 0 10px 10px -5px rgba(59, 145, 148, 0.04);
         }
     </style>
 </head>
@@ -64,31 +77,32 @@
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 md:h-20 items-center">
-                <div class="flex items-center">
-                    <img src="images/logo_medical.jpg" alt="Med Repair logo" class="logo-img">
+            <div class="flex justify-between h-20 md:h-24 items-center">
+                <div class="flex items-center py-2">
+                    <img src="logo.jpg" alt="Med Repair logo" class="logo-img">
                 </div>
                 
-                <!-- Desktop Nav -->
                 <div class="hidden md:flex space-x-8 font-semibold items-center">
                     <a href="#" class="text-[#3b9194]">Home</a>
                     <a href="#services" class="text-slate-600 hover:text-[#3b9194] transition-colors">Services</a>
-                    <a href="#contact" class="bg-[#3b9194] text-white px-6 py-2.5 rounded-full hover:bg-[#2d6a6d] transition-all shadow-md shadow-teal-100">Contact Support</a>
+                    <a href="#plans" class="text-slate-600 hover:text-[#3b9194] transition-colors">Maintenance Plans</a>
+                    <a href="#gallery" class="text-slate-600 hover:text-[#3b9194] transition-colors">Work</a>
+                    <a href="#contact" class="bg-[#3b9194] text-white px-6 py-3 rounded-full hover:bg-[#2d6a6d] transition-all shadow-md">Contact Support</a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="menu-toggle" class="text-slate-600 p-2 focus:outline-none" aria-label="Toggle menu">
+                    <button id="menu-toggle" class="text-slate-600 p-2 focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="md:hidden flex-col bg-white border-b border-slate-100 p-4 space-y-4 shadow-xl">
             <a href="#" class="block px-4 py-2 font-semibold text-[#3b9194]">Home</a>
             <a href="#services" class="block px-4 py-2 font-semibold text-slate-600">Services</a>
+            <a href="#plans" class="block px-4 py-2 font-semibold text-slate-600">Maintenance Plans</a>
+            <a href="#gallery" class="block px-4 py-2 font-semibold text-slate-600">Work Gallery</a>
             <a href="#contact" class="block px-4 py-3 font-semibold bg-[#3b9194] text-white rounded-xl text-center">Contact Support</a>
         </div>
     </nav>
@@ -101,42 +115,30 @@
                     <span class="w-2 h-2 bg-teal-300 rounded-full mr-3 animate-pulse"></span>
                     Med Repair: Technical Excellence
                 </div>
-                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tight">
+                <!-- <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tight">
                     Reliable <span class="text-teal-200">Biomedical-IT</span> <br class="hidden sm:block"> Solutions
-                </h1>
-                <p class="text-lg md:text-xl text-teal-50 max-w-2xl mx-auto lg:mx-0 leading-relaxed opacity-90">
-                    "Focus on your Patient. We will take care of your Equipment." 
-                    Professional installation and maintenance for medical facilities across Congo DRC.
+                </h1> -->
+                <p class="text-lg md:text-xl text-teal-50 max-w-lg mx-auto lg:mx-0 leading-relaxed opacity-90 italic">
+                    "Focus on your Patient. We will take care of your Equipment."
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
-                    <a href="#contact" class="w-full sm:w-auto bg-white text-[#3b9194] px-8 py-4 rounded-2xl font-bold shadow-2xl hover:bg-teal-50 text-center transition-all">
-                        Request Maintenance
+                    <a href="#plans" class="w-full sm:w-auto bg-white text-[#3b9194] px-8 py-4 rounded-2xl font-bold shadow-2xl hover:bg-teal-50 text-center transition-all">
+                        View Maintenance Packages
                     </a>
                     <a href="tel:+243979255850" class="w-full sm:w-auto bg-transparent border-2 border-white/40 px-8 py-4 rounded-2xl font-bold transition-all flex items-center justify-center">
-                        <i class="fas fa-phone-alt mr-3"></i> Call Now
+                        <i class="fas fa-phone-alt mr-3"></i> Call +243 979 255 850
                     </a>
                 </div>
             </div>
 
-            <!-- Profile Image Area -->
             <div class="w-full lg:w-2/5 mt-12 lg:mt-0 relative flex justify-center">
                 <div class="relative w-72 h-72 sm:w-80 sm:h-80 md:w-[450px] md:h-[450px]">
-                    <!-- Background Glow -->
                     <div class="absolute inset-0 bg-teal-400 rounded-full blur-3xl opacity-20"></div>
-                    
-                    <!-- Medical Equipment Main Image -->
                     <div class="relative w-full h-full rounded-[2.5rem] profile-border overflow-hidden shadow-2xl bg-slate-200">
-                        <img src="images/head1.jpg" alt="Medical Equipment" class="w-full h-full object-cover">
+                        <img src="business card biomecal-1.jpg" alt="Tony working on Medical Equipment" class="w-full h-full object-cover">
                     </div>
-                    
-                    <!-- Circular Overlay Profile (Tony) -->
-                    <div class="absolute -bottom-6 -left-6 md:-bottom-10 md:-left-10 w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-white shadow-2xl overflow-hidden bg-slate-300 z-20">
-                        <img src="images/bm0.jpg" alt="Tony Byamungu" class="w-full h-full object-cover">
-                    </div>
-
-                    <!-- Expertise Badge -->
                     <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm p-3 md:p-4 rounded-2xl shadow-xl text-slate-900 border border-slate-100 z-20">
-                        <p class="text-[10px] font-bold text-teal-600 uppercase tracking-wider">Lead Engineer</p>
+                        <p class="text-[10px] font-bold text-teal-600 uppercase tracking-wider">Biomedical Engineer</p>
                         <p class="text-sm md:text-base font-bold">Tony Byamungu</p>
                     </div>
                 </div>
@@ -144,95 +146,244 @@
         </div>
     </section>
 
-    <!-- Quick Stats -->
-    <div class="max-w-6xl mx-auto px-4 -mt-10 md:-mt-12 relative z-20">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-            <div class="bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-lg border border-slate-100 flex items-center md:items-start space-x-4 md:space-x-5">
-                <div class="bg-teal-50 p-3 md:p-4 rounded-xl md:rounded-2xl text-[#3b9194]">
-                    <i class="fas fa-microscope text-xl md:text-2xl"></i>
+    <!-- Dialysis Specialization Highlight -->
+    <section class="py-12 bg-white px-4 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="flex items-center space-x-6">
+                <div class="w-16 h-16 md:w-20 md:h-20 bg-teal-50 rounded-2xl flex items-center justify-center text-[#3b9194] shadow-inner">
+                    <i class="fas fa-vial-circle-check text-2xl md:text-4xl"></i>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg md:text-xl">Diagnostics</h3>
-                    <p class="text-slate-500 text-xs md:text-sm">Precision laboratory repair.</p>
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900">New Specialization: Dialysis Systems</h3>
+                    <p class="text-slate-500 text-sm md:text-base">Comprehensive maintenance for Hemodialysis & Water Treatment Units.</p>
                 </div>
             </div>
-            <div class="bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-lg border border-slate-100 flex items-center md:items-start space-x-4 md:space-x-5">
-                <div class="bg-blue-50 p-3 md:p-4 rounded-xl md:rounded-2xl text-blue-600">
-                    <i class="fas fa-clipboard-check text-xl md:text-2xl"></i>
+            <a href="#contact" class="px-6 py-3 bg-slate-900 text-white rounded-xl font-bold text-sm hover:bg-teal-600 transition-all flex items-center">
+                Request Dialysis Audit <i class="fas fa-arrow-right ml-3"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Detailed Maintenance Plans Section -->
+    <section id="plans" class="py-16 md:py-24 px-4 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-teal-600 font-bold tracking-widest uppercase text-xs md:text-sm mb-3">Structured Support</h2>
+                <h3 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Maintenance Packages</h3>
+                <p class="text-slate-600 max-w-2xl mx-auto text-sm md:text-lg">
+                    Reduce downtime and extend equipment lifespan with our professional monthly contract models.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+                <!-- Basic Plan -->
+                <div class="plan-card bg-white p-8 rounded-[2rem] border border-slate-200 flex flex-col h-full relative">
+                    <div class="mb-8">
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Basic Plan</h4>
+                        <div class="flex items-baseline mb-4">
+                            <span class="text-3xl font-extrabold text-[#3b9194]">$200</span>
+                            <span class="text-slate-500 ml-2 font-medium">/ Month</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Ideal for small clinics with standard diagnostic needs.</p>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start text-sm text-slate-700">
+                            <i class="fas fa-clock text-teal-500 mt-1 mr-3"></i>
+                            <span><strong>72 Hours</strong> Response Time</span>
+                        </li>
+                        <li class="flex items-start text-sm text-slate-700">
+                            <i class="fas fa-calendar-check text-teal-500 mt-1 mr-3"></i>
+                            <span>Scheduled Preventive Maintenance</span>
+                        </li>
+                        <li class="flex items-start text-sm text-slate-700">
+                            <i class="fas fa-file-alt text-teal-500 mt-1 mr-3"></i>
+                            <span>Basic Service Reporting</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block text-center py-4 bg-white border-2 border-[#3b9194] text-[#3b9194] font-bold rounded-xl hover:bg-[#3b9194] hover:text-white transition-all">Get Started</a>
                 </div>
-                <div>
-                    <h3 class="font-bold text-lg md:text-xl">Safety</h3>
-                    <p class="text-slate-500 text-xs md:text-sm">Global quality standards.</p>
+
+                <!-- Standard Plan -->
+                <div class="plan-card bg-slate-900 p-8 rounded-[2rem] border border-slate-800 flex flex-col h-full relative transform md:scale-105 z-10 shadow-2xl">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-teal-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Most Popular</div>
+                    <div class="mb-8">
+                        <h4 class="text-xl font-bold text-white mb-2">Standard Plan</h4>
+                        <div class="flex items-baseline mb-4">
+                            <span class="text-3xl font-extrabold text-teal-400">$400</span>
+                            <span class="text-slate-400 ml-2 font-medium">/ Month</span>
+                        </div>
+                        <p class="text-slate-400 text-sm">Comprehensive coverage for busy medical centers.</p>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start text-sm text-slate-200">
+                            <i class="fas fa-bolt text-teal-400 mt-1 mr-3"></i>
+                            <span><strong>48 Hours</strong> Priority Response</span>
+                        </li>
+                        <li class="flex items-start text-sm text-slate-200">
+                            <i class="fas fa-tools text-teal-400 mt-1 mr-3"></i>
+                            <span>Preventive & Corrective Maintenance Included</span>
+                        </li>
+                        <li class="flex items-start text-sm text-slate-200">
+                            <i class="fas fa-chart-line text-teal-400 mt-1 mr-3"></i>
+                            <span>Detailed Maintenance Reporting</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block text-center py-4 bg-teal-500 text-white font-bold rounded-xl hover:bg-teal-600 transition-all">Select Standard</a>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="plan-card bg-white p-8 rounded-[2rem] border border-slate-200 flex flex-col h-full relative">
+                    <div class="mb-8">
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Premium Plan</h4>
+                        <div class="flex items-baseline mb-4">
+                            <span class="text-3xl font-extrabold text-[#3b9194]">Custom</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Tailored solutions for large hospitals and specialist centers.</p>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start text-sm text-slate-700">
+                            <i class="fas fa-fighter-jet text-teal-500 mt-1 mr-3"></i>
+                            <span><strong>24 Hours</strong> Critical Support</span>
+                        </li>
+                        <li class="flex items-start text-sm text-slate-700">
+                            <i class="fas fa-clipboard-list text-teal-500 mt-1 mr-3"></i>
+                            <span>Full Performance Tracking</span>
+                        </li>
+                        <li class="flex items-start text-sm text-slate-700">
+                            <i class="fas fa-user-shield text-teal-500 mt-1 mr-3"></i>
+                            <span>Highest Priority Technical Support</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block text-center py-4 bg-white border-2 border-slate-900 text-slate-900 font-bold rounded-xl hover:bg-slate-900 hover:text-white transition-all">Contact for Quote</a>
                 </div>
             </div>
-            <div class="bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-lg border border-slate-100 flex items-center md:items-start space-x-4 md:space-x-5">
-                <div class="bg-slate-900 p-3 md:p-4 rounded-xl md:rounded-2xl text-teal-400">
-                    <i class="fas fa-server text-xl md:text-2xl"></i>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg md:text-xl text-slate-900 md:text-white">IT Connect</h3>
-                    <p class="text-slate-500 text-xs md:text-sm">Networked medical systems.</p>
+
+            <!-- Equipment Service List -->
+            <div class="bg-teal-50/50 rounded-[3rem] p-8 md:p-12 border border-teal-100 bg-white">
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="w-full lg:w-1/2">
+                        <h4 class="text-2xl md:text-3xl font-bold text-slate-900 mb-6">Equipment We Service</h4>
+                        <p class="text-slate-600 mb-8 leading-relaxed">
+                            Our team is trained in the latest safety and inspection standards to ensure every device in your inventory performs at its peak.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex items-center p-4 bg-white rounded-2xl shadow-sm border border-slate-100">
+                                <div class="w-10 h-10 bg-teal-100 text-[#3b9194] rounded-lg flex items-center justify-center mr-4"><i class="fas fa-vial-circle-check"></i></div>
+                                <span class="font-semibold text-slate-700">Dialysis Systems</span>
+                            </div>
+                            <div class="flex items-center p-4 bg-white rounded-2xl shadow-sm border border-slate-100">
+                                <div class="w-10 h-10 bg-teal-100 text-[#3b9194] rounded-lg flex items-center justify-center mr-4"><i class="fas fa-radiation"></i></div>
+                                <span class="font-semibold text-slate-700">X-ray Systems</span>
+                            </div>
+                            <div class="flex items-center p-4 bg-white rounded-2xl shadow-sm border border-slate-100">
+                                <div class="w-10 h-10 bg-teal-100 text-[#3b9194] rounded-lg flex items-center justify-center mr-4"><i class="fas fa-wave-square"></i></div>
+                                <span class="font-semibold text-slate-700">Ultrasound</span>
+                            </div>
+                            <div class="flex items-center p-4 bg-white rounded-2xl shadow-sm border border-slate-100">
+                                <div class="w-10 h-10 bg-teal-100 text-[#3b9194] rounded-lg flex items-center justify-center mr-4"><i class="fas fa-flask"></i></div>
+                                <span class="font-semibold text-slate-700">Lab Analyzers</span>
+                            </div>
+                            <div class="flex items-center p-4 bg-white rounded-2xl shadow-sm border border-slate-100">
+                                <div class="w-10 h-10 bg-teal-100 text-[#3b9194] rounded-lg flex items-center justify-center mr-4"><i class="fas fa-heartbeat"></i></div>
+                                <span class="font-semibold text-slate-700">Patient Monitors</span>
+                            </div>
+                            <div class="flex items-center p-4 bg-white rounded-2xl shadow-sm border border-slate-100">
+                                <div class="w-10 h-10 bg-teal-100 text-[#3b9194] rounded-lg flex items-center justify-center mr-4"><i class="fas fa-network-wired"></i></div>
+                                <span class="font-semibold text-slate-700">Network & ERP</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <img src="business card biomecal-2.png" alt="Equipment Catalog" class="rounded-[2rem] shadow-2xl border-4 border-white">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Main Services -->
-    <section id="services" class="py-16 md:py-24 px-4 max-w-7xl mx-auto">
+    <!-- Capabilities Overview -->
+    <section id="services" class="py-16 md:py-24 px-4 max-w-7xl mx-auto bg-white">
         <div class="text-center lg:text-left mb-12 md:mb-16">
-            <h2 class="text-teal-600 font-bold tracking-widest uppercase text-xs md:text-sm mb-3">Our Core Services</h2>
-            <h3 class="text-3xl md:text-5xl font-bold text-slate-900 leading-tight">Technical excellence for healthcare providers.</h3>
+            <h2 class="text-teal-600 font-bold tracking-widest uppercase text-xs md:text-sm mb-3">Capabilities</h2>
+            <h3 class="text-3xl md:text-5xl font-bold text-slate-900 leading-tight">Comprehensive Technical Services</h3>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <!-- Installation -->
-            <div class="service-card bg-white p-8 md:p-10 rounded-2xl md:rounded-3xl border border-slate-100 shadow-sm transition-all group">
-                <div class="w-12 h-12 md:w-14 md:h-14 bg-slate-50 text-[#3b9194] rounded-xl md:rounded-2xl flex items-center justify-center mb-6 md:mb-8 group-hover:bg-[#3b9194] group-hover:text-white transition-colors">
-                    <i class="fas fa-tools text-xl md:text-2xl"></i>
+            <div class="service-card bg-slate-50 p-8 md:p-10 rounded-2xl md:rounded-3xl border border-slate-100 shadow-sm transition-all group">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-white text-[#3b9194] rounded-xl md:rounded-2xl flex items-center justify-center mb-6 md:mb-8 group-hover:bg-[#3b9194] group-hover:text-white transition-colors shadow-sm">
+                    <i class="fas fa-vial-circle-check text-xl md:text-2xl"></i>
                 </div>
-                <h4 class="text-xl md:text-2xl font-bold mb-3 md:mb-4">Installation</h4>
-                <p class="text-slate-600 mb-6 text-sm md:text-base leading-relaxed">End-to-end setup of complex medical machinery, from site preparation to final calibration.</p>
-                <ul class="text-xs md:text-sm text-slate-500 space-y-2">
-                    <li class="flex items-center"><i class="fas fa-check-circle text-teal-500 mr-2"></i> Commissioning</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-teal-500 mr-2"></i> Site Planning</li>
-                </ul>
+                <h4 class="text-xl md:text-2xl font-bold mb-3">Dialysis Maintenance</h4>
+                <p class="text-slate-600 mb-6 text-sm md:text-base leading-relaxed">Expert upkeep for Hemodialysis machines and critical Reverse Osmosis (RO) water treatment systems.</p>
             </div>
 
-            <!-- Maintenance -->
-            <div class="service-card bg-white p-8 md:p-10 rounded-2xl md:rounded-3xl border border-slate-100 shadow-sm transition-all group">
-                <div class="w-12 h-12 md:w-14 md:h-14 bg-slate-50 text-[#3b9194] rounded-xl md:rounded-2xl flex items-center justify-center mb-6 md:mb-8 group-hover:bg-[#3b9194] group-hover:text-white transition-colors">
-                    <i class="fas fa-heartbeat text-xl md:text-2xl"></i>
+            <div class="service-card bg-slate-50 p-8 md:p-10 rounded-2xl md:rounded-3xl border border-slate-100 shadow-sm transition-all group">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-white text-[#3b9194] rounded-xl md:rounded-2xl flex items-center justify-center mb-6 md:mb-8 group-hover:bg-[#3b9194] group-hover:text-white transition-colors shadow-sm">
+                    <i class="fas fa-shield-alt text-xl md:text-2xl"></i>
                 </div>
-                <h4 class="text-xl md:text-2xl font-bold mb-3 md:mb-4">Maintenance</h4>
-                <p class="text-slate-600 mb-6 text-sm md:text-base leading-relaxed">Maximize equipment lifespan with scheduled technical audits and performance verification.</p>
-                <ul class="text-xs md:text-sm text-slate-500 space-y-2">
-                    <li class="flex items-center"><i class="fas fa-check-circle text-teal-500 mr-2"></i> Annual Contracts</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-teal-500 mr-2"></i> Performance Logs</li>
-                </ul>
+                <h4 class="text-xl md:text-2xl font-bold mb-3">Safety & Inspection</h4>
+                <p class="text-slate-600 mb-6 text-sm md:text-base">Rigorous quality audits to ensure equipment meets international safety and hygiene regulations.</p>
             </div>
 
-            <!-- Repairs -->
-            <div class="service-card bg-white p-8 md:p-10 rounded-2xl md:rounded-3xl border border-slate-100 shadow-sm transition-all group">
-                <div class="w-12 h-12 md:w-14 md:h-14 bg-slate-50 text-[#3b9194] rounded-xl md:rounded-2xl flex items-center justify-center mb-6 md:mb-8 group-hover:bg-[#3b9194] group-hover:text-white transition-colors">
-                    <i class="fas fa-stethoscope text-xl md:text-2xl"></i>
+            <div class="service-card bg-slate-50 p-8 md:p-10 rounded-2xl md:rounded-3xl border border-slate-100 shadow-sm transition-all group">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-white text-[#3b9194] rounded-xl md:rounded-2xl flex items-center justify-center mb-6 md:mb-8 group-hover:bg-[#3b9194] group-hover:text-white transition-colors shadow-sm">
+                    <i class="fas fa-graduation-cap text-xl md:text-2xl"></i>
                 </div>
-                <h4 class="text-xl md:text-2xl font-bold mb-3 md:mb-4">Repairs</h4>
-                <p class="text-slate-600 mb-6 text-sm md:text-base leading-relaxed">Specialized troubleshooting for imaging, surgical, and diagnostic equipment malfunctions.</p>
-                <ul class="text-xs md:text-sm text-slate-500 space-y-2">
-                    <li class="flex items-center"><i class="fas fa-check-circle text-teal-500 mr-2"></i> Circuit Diagnostics</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-teal-500 mr-2"></i> Component Swaps</li>
-                </ul>
+                <h4 class="text-xl md:text-2xl font-bold mb-3">Staff Training</h4>
+                <p class="text-slate-600 mb-6 text-sm md:text-base">Operational training for medical staff to optimize equipment use and handle basic troubleshooting.</p>
             </div>
         </div>
-        
-        <!-- Showcase Image Section -->
-        <div class="mt-16 md:mt-20 rounded-3xl md:rounded-[3rem] overflow-hidden relative group">
-            <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-all duration-700"></div>
-            <img src="business card biomecal-2.png" alt="Medical Catalog" class="w-full h-[300px] md:h-[450px] object-cover object-center">
-            <div class="absolute inset-0 flex items-center justify-center p-6 md:p-8">
-                <div class="text-center text-white glass-card p-6 md:p-10 rounded-2xl md:rounded-3xl max-w-2xl border-white/30">
-                    <h4 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-slate-900">Diverse Modality Expertise</h4>
-                    <p class="text-slate-600 text-sm md:text-lg">Full spectrum coverage for hospital technology, from imaging to lab analysis.</p>
+    </section>
+
+    <!-- Work Gallery Section -->
+    <section id="gallery" class="py-16 md:py-24 bg-slate-100 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-teal-600 font-bold tracking-widest uppercase text-xs md:text-sm mb-3">Work Showcase</h2>
+                <h3 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Our Projects in Action</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                <div class="gallery-item group relative overflow-hidden rounded-3xl h-64 md:h-80 shadow-md">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=800" alt="Dialysis Maintenance" class="w-full h-full object-cover">
+
+                    <img src="images/bm0.jpg" alt="Biomedical work">
+            <img src="images/bm2.jpg" alt="Biomedical work">
+            <img src="images/bm1.jpg" alt="Biomedical work">
+            <img src="images/bm3.jpg" alt="Biomedical work">
+            <img src="images/bm4.jpg" alt="Biomedical work">
+            <img src="images/bm001.jpg" alt="Biomedical work">
+            <img src="images/bm002.jpg" alt="Biomedical work">
+            <img src="images/bm5.jpg" alt="Biomedical work">
+            <img src="images/bm6.jpg" alt="Biomedical work">
+            <img src="images/bm7.jpg" alt="Biomedical work">
+            <img src="images/bm8.jpg" alt="Biomedical work">
+            <img src="images/bm9.jpg" alt="Biomedical work">
+            <img src="images/bm13.jpg" alt="Biomedical work">
+            <img src="images/bm14.jpg" alt="Biomedical work">
+            <img src="images/bm12.jpg" alt="Biomedical work">
+            <img src="images/bm15.jpg" alt="Biomedical work">
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-teal-400 text-xs font-bold uppercase tracking-widest mb-2">Technical Service</span>
+                        <h4 class="text-white text-lg font-bold">Dialysis RO System Calibration</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative overflow-hidden rounded-3xl h-64 md:h-80 shadow-md">
+                    <img src="https://images.unsplash.com/photo-1579154236594-e178f46a782d?auto=format&fit=crop&q=80&w=800" alt="Lab Diagnostic Equipment" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-teal-400 text-xs font-bold uppercase tracking-widest mb-2">Installation</span>
+                        <h4 class="text-white text-lg font-bold">Laboratory Diagnostics Setup</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative overflow-hidden rounded-3xl h-64 md:h-80 shadow-md">
+                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=800" alt="Surgical Room Tech" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-teal-400 text-xs font-bold uppercase tracking-widest mb-2">Maintenance</span>
+                        <h4 class="text-white text-lg font-bold">Operating Theatre Integration</h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -243,12 +394,9 @@
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
             <div class="space-y-8 md:space-y-10 text-center lg:text-left">
                 <div>
-                    <div class="bg-white p-3 inline-block rounded-xl mb-6">
-                        <img src="logo.jpg" alt="Med Repair logo" class="h-8 md:h-10 w-auto">
-                    </div>
                     <h3 class="text-3xl md:text-5xl font-bold mb-6">Let's solve your technical challenges.</h3>
-                    <p class="text-slate-400 text-lg md:text-xl max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                        Operating from Kolwezi, Lualaba. On-site technical expertise across the region.
+                    <p class="text-lg md:text-xl text-slate-400 max-w-lg mx-auto lg:mx-0 leading-relaxed italic">
+                        "Focus on your Patient. We will take care of your Equipment."
                     </p>
                 </div>
                 
@@ -274,22 +422,24 @@
                 </div>
             </div>
 
-            <!-- Contact Form Card -->
             <div class="bg-white p-6 md:p-10 rounded-2xl md:rounded-[2.5rem] shadow-2xl relative">
-                <h4 class="text-slate-900 text-xl md:text-2xl font-bold mb-6 md:mb-8 text-center lg:text-left">Service Request</h4>
+                <h4 class="text-slate-900 text-xl md:text-2xl font-bold mb-6 text-center lg:text-left">Service Request</h4>
                 <form class="space-y-4 md:space-y-5" onsubmit="event.preventDefault(); alert('Request sent! Tony will contact you shortly.')">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input type="text" placeholder="Name" class="w-full px-5 py-3 md:py-4 rounded-xl bg-slate-100 border-none focus:ring-2 focus:ring-teal-500 text-slate-900">
-                        <input type="text" placeholder="Hospital" class="w-full px-5 py-3 md:py-4 rounded-xl bg-slate-100 border-none focus:ring-2 focus:ring-teal-500 text-slate-900">
+                        <input type="text" placeholder="Your Name" class="w-full px-5 py-3 md:py-4 rounded-xl bg-slate-100 border-none focus:ring-2 focus:ring-teal-500 text-slate-900">
+                        <input type="text" placeholder="Medical Facility" class="w-full px-5 py-3 md:py-4 rounded-xl bg-slate-100 border-none focus:ring-2 focus:ring-teal-500 text-slate-900">
                     </div>
                     <select class="w-full px-5 py-3 md:py-4 rounded-xl bg-slate-100 border-none focus:ring-2 focus:ring-teal-500 text-slate-900">
-                        <option>Repair Service</option>
-                        <option>Maintenance</option>
+                        <option>Service Category...</option>
+                        <option>Dialysis Maintenance</option>
+                        <option>Imaging Systems (X-ray/Ultra)</option>
+                        <option>Lab Equipment</option>
                         <option>IT Integration</option>
+                        <option>Maintenance Contract (Standard/Basic)</option>
                     </select>
-                    <textarea rows="3" placeholder="Description..." class="w-full px-5 py-3 md:py-4 rounded-xl bg-slate-100 border-none focus:ring-2 focus:ring-teal-500 text-slate-900"></textarea>
+                    <textarea rows="3" placeholder="Describe the technical issue..." class="w-full px-5 py-3 md:py-4 rounded-xl bg-slate-100 border-none focus:ring-2 focus:ring-teal-500 text-slate-900"></textarea>
                     <button class="w-full bg-[#3b9194] text-white py-4 md:py-5 rounded-xl md:rounded-2xl font-bold hover:bg-[#2d6a6d] transition-all shadow-xl">
-                        Submit
+                        Submit Request
                     </button>
                 </form>
             </div>
@@ -299,22 +449,20 @@
     <!-- Footer -->
     <footer class="bg-slate-950 py-12 px-4 border-t border-white/5">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-            <div class="mb-6 md:mb-0 bg-white/10 p-2 rounded-lg">
-                <img src="logo.jpg" alt="Med Repair logo" class="h-8 w-auto">
+            <div class="mb-6 md:mb-0 bg-white p-3 rounded-lg">
+                <img src="images/logo_medical.jpg" alt="Med Repair logo" class="h-12 w-auto">
             </div>
             <div class="text-slate-500 space-y-1">
                 <p class="font-bold text-white">Tony Byamungu</p>
                 <p class="text-sm">© 2024 Med Repair. Kolwezi, Congo DRC.</p>
                 <div class="flex space-x-6 pt-4 justify-center md:justify-end">
-                    <a href="https://py-tony.netlify.app/" target="_blank" class="hover:text-teal-400 text-sm">Portfolio</a>
-                    <a href="tel:+243979255850" class="text-teal-500 text-sm font-bold">Call Now</a>
+                    <a href="https://py-tony.netlify.app/" target="_blank" class="hover:text-teal-400 text-sm underline underline-offset-4">Engineer Portfolio</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Simple Mobile Menu Toggle
         const menuBtn = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -325,7 +473,6 @@
             icon.classList.toggle('fa-times');
         });
 
-        // Close menu on link click
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
