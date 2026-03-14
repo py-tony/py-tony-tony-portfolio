@@ -29,6 +29,72 @@
     padding-top: 8%;
             
   }
+
+    /* style for medical section starts here */
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --brand-teal: #3b9194;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b9194 0%, #1e4d4f 100%);
+        }
+
+        .service-card:active {
+            transform: scale(0.98);
+        }
+
+        @media (min-width: 768px) {
+            .service-card:hover {
+                transform: translateY(-5px);
+                transition: all 0.3s ease;
+            }
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 50px;
+            }
+        }
+
+        .profile-border {
+            border: 6px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        #mobile-menu {
+            display: none;
+        }
+        #mobile-menu.active {
+            display: flex;
+        }
+
+        .plan-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .plan-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(59, 145, 148, 0.1), 0 10px 10px -5px rgba(59, 145, 148, 0.04);
+        }
+    /* <!-- style for medical section end here --> */
   
 </style>
 <body>
