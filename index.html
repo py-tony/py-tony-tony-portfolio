@@ -1,316 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Biomedical Equipment Maintenance | Med Repair DRC</title>
-  <meta
-    name="description"
-    content="Biomedical equipment repair and maintenance services in Kolwezi and Lubumbashi. Dialysis systems, laboratory equipment, ultrasound, X-ray support and hospital technical services."
-  />
-  <meta name="author" content="Tony Byamungu" />
-  <meta name="robots" content="index, follow" />
-  <link rel="icon" href="../image/favicon.ico" type="image/x-icon" />
+<title>Biomedical Equipment Maintenance | Med Repair DRC</title>
 
-  <!-- Fonts / Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
+<meta name="description"
+content="Biomedical equipment repair and maintenance services in Kolwezi and Lubumbashi. Dialysis systems, laboratory equipment, ultrasound, X-ray support and hospital technical services.">
 
-  <!-- Bootstrap -->
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-  />
+<meta name="author" content="Tony Byamungu">
+<meta name="robots" content="index, follow">
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+<link rel="icon" href="../image/favicon.ico">
 
-  <!-- Custom stylesheet -->
-  <link rel="stylesheet" href="css/stylesheet.css" />
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Buy Me a Coffee -->
-  <script
-    data-name="BMC-Widget"
-    src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-    data-id="pytony"
-    data-description="Support me on Buy-me-a-coffee!"
-    data-message="Thank you for visiting. You can now buy me a coffee!"
-    data-color="#5F7FFF"
-    data-position="right"
-    data-x_margin="18"
-    data-y_margin="18"
-  ></script>
+<!-- FontAwesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <style>
-    :root {
-      --brand-teal: #3b9194;
-    }
+<!-- Bootstrap -->
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-    html,
-    body {
-      min-height: 100%;
-      margin: 0;
-      padding: 0;
-      background-color: #000;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      scroll-behavior: smooth;
-      -webkit-tap-highlight-color: transparent;
-    }
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/stylesheet.css">
 
-    body {
-      display: flex;
-      flex-direction: column;
-    }
+<style>
 
-    .my-main-section {
-      min-height: 100vh;
-      padding-top: 8%;
-    }
+body{
+background:#000;
+font-family:'Plus Jakarta Sans',sans-serif;
+color:#fff;
+scroll-behavior:smooth;
+}
 
-    .img {
-      padding-top: 5%;
-    }
+.my-main-section{
+min-height:100vh;
+display:flex;
+align-items:center;
+}
 
-    .hero-gradient {
-      background: linear-gradient(135deg, #3b9194 0%, #1e4d4f 100%);
-    }
+.img{
+padding-top:20px;
+}
 
-    .service-card:active {
-      transform: scale(0.98);
-    }
+.logo-img{
+height:60px;
+}
 
-    @media (min-width: 768px) {
-      .service-card:hover {
-        transform: translateY(-5px);
-        transition: all 0.3s ease;
-      }
-    }
+@media(max-width:768px){
+.logo-img{
+height:50px;
+}
+}
 
-    .logo-img {
-      height: 60px;
-      width: auto;
-      object-fit: contain;
-    }
+.profile-border{
+border:6px solid rgba(255,255,255,0.3);
+}
 
-    @media (max-width: 768px) {
-      .logo-img {
-        height: 50px;
-      }
-    }
+.gallery-item img{
+transition:transform .5s ease;
+}
 
-    .profile-border {
-      border: 6px solid rgba(255, 255, 255, 0.3);
-    }
+.gallery-item:hover img{
+transform:scale(1.1);
+}
 
-    .gallery-item img {
-      transition: transform 0.5s ease;
-    }
+.service-card{
+transition:0.3s;
+}
 
-    .gallery-item:hover img {
-      transform: scale(1.1);
-    }
+.service-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
 
-    #mobile-menu {
-      display: none;
-    }
+.plan-card{
+transition:.3s;
+}
 
-    #mobile-menu.active {
-      display: flex;
-    }
+.plan-card:hover{
+box-shadow:0 20px 25px rgba(59,145,148,.1);
+}
 
-    .plan-card {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:#fff;
+padding:12px 18px;
+border-radius:50px;
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,.3);
+z-index:9999;
+}
 
-    .plan-card:hover {
-      box-shadow: 0 20px 25px -5px rgba(59, 145, 148, 0.1),
-        0 10px 10px -5px rgba(59, 145, 148, 0.04);
-    }
+.whatsapp-float:hover{
+color:#fff;
+text-decoration:none;
+opacity:.9;
+}
 
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 50px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      z-index: 9999;
-    }
+</style>
 
-    .whatsapp-float:hover {
-      color: white;
-      text-decoration: none;
-      opacity: 0.95;
-    }
-  </style>
 </head>
 
 <body>
-  <header id="header"></header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="bg-dark container-fluid my-main-section">
-      <div class="container-fluid text-light bg-dark">
-        <div class="row align-items-center">
-          <div class="middle-align text-light col-lg-6 col-md-6 col-sm-12">
-            <h1 class="text-info intro">
-              Hi,<br />
-              my name is <br />
-              <div class="text-light">
-                Tony Byamungu
-                <small style="font-size: 12px;">alias pyTony</small>
-              </div>
-              <small class="text-muted">
-                I'm a Multidisciplinary IT Specialist, Data Scientist, and Biomedical Technician with strong experience in software development and medical equipment support.
-              </small>
-              <br /><br />
-              <a class="btn btn-primary active" href="../biomedical-it-services.html" role="button">
-                Learn More
-              </a>
-            </h1>
-          </div>
+<header id="header"></header>
 
-          <div class="col-lg-6 col-md-6 col-sm-12 img">
-            <img
-              src="image/contactBack.png"
-              alt="Tony Byamungu portfolio profile illustration"
-              class="mypic img-fluid"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+<main>
 
-    <!-- Medical SEO Section -->
-    <section style="padding: 60px 20px; background: #f8f9fa;">
-      <div style="max-width: 1100px; margin: auto;">
-        <h2 style="text-align: center; font-size: 32px; margin-bottom: 20px; color: #0a2a43;">
-          Medical Equipment Services in Kolwezi & Lubumbashi
-        </h2>
+<!-- HERO -->
+<section class="container-fluid bg-dark my-main-section">
 
-        <p style="text-align: center; font-size: 18px; max-width: 800px; margin: 0 auto 40px; color: #555;">
-          <strong>Med Repair</strong> delivers professional biomedical repair and preventive maintenance
-          services to hospitals, clinics, and laboratories across Kolwezi and Lubumbashi.
-          We help healthcare facilities reduce downtime, extend equipment lifespan,
-          and ensure reliable patient care.
-        </p>
+<div class="container">
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-          <div style="background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
-            <h3 style="color: #0a2a43; margin-bottom: 15px;">
-              Biomedical Repair Services in Kolwezi
-            </h3>
-            <p style="color: #555; line-height: 1.6;">
-              We support healthcare institutions in Kolwezi with expert diagnosis,
-              corrective repair, preventive maintenance, installation, and calibration support.
-              From patient monitors and ICU equipment to laboratory systems and sterilization units,
-              Med Repair ensures your critical devices operate safely and efficiently.
-            </p>
-          </div>
+<div class="row align-items-center">
 
-          <div style="background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
-            <h3 style="color: #0a2a43; margin-bottom: 15px;">
-              Medical Equipment Maintenance in Lubumbashi
-            </h3>
-            <p style="color: #555; line-height: 1.6;">
-              In Lubumbashi, we provide structured preventive maintenance programs
-              and rapid technical intervention services. Our approach reduces unexpected
-              breakdowns, improves equipment reliability, and helps clinics control operational costs.
-            </p>
-          </div>
-        </div>
+<div class="col-lg-6 col-md-6 col-sm-12">
 
-        <div style="text-align: center; margin-top: 50px;">
-          <p style="font-size: 18px; color: #333; margin-bottom: 20px;">
-            Need urgent repair or long-term maintenance support?
-          </p>
+<h1 class="text-info">
+Hi,<br>
+my name is
+</h1>
 
-          <a
-            href="#contact"
-            style="background: #0a2a43; color: #ffffff; padding: 14px 28px; text-decoration: none; border-radius: 30px; font-weight: bold; box-shadow: 0 6px 15px rgba(0,0,0,0.2); transition: 0.3s;"
-          >
-            Request Technical Support
-          </a>
-        </div>
-      </div>
-    </section>
+<h2 class="font-weight-bold">
+Tony Byamungu
+<small class="text-info d-block">
+alias pyTony
+</small>
+</h2>
 
-    <!-- Keep your other sections here -->
-    <!-- Dialysis, plans, services, gallery, contact, footer -->
-  </main>
+<p class="text-muted mt-3">
 
-  <!-- Footer -->
-  <footer id="footer" class="navbar-fixed-bottom"></footer>
+I'm a Multidisciplinary IT Specialist, Data Scientist,
+and Biomedical Technician with strong experience in
+software development and medical equipment support.
 
-  <!-- WhatsApp Button -->
-  <a
-    href="https://wa.me/243979255850"
-    target="_blank"
-    class="whatsapp-float"
-    aria-label="Chat on WhatsApp"
-  >
-    <i class="fab fa-whatsapp"></i> WhatsApp
-  </a>
+</p>
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<a class="btn btn-primary mt-3"
+href="../biomedical-it-services.html">
 
-  <script>
-    $(function () {
-      $('#header').load('headernav.html');
-      $('#footer').load('footer.html');
-    });
+Learn More
 
-    const menuBtn = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
+</a>
 
-    if (menuBtn && mobileMenu) {
-      menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-        const icon = menuBtn.querySelector('i');
-        if (icon) {
-          icon.classList.toggle('fa-bars');
-          icon.classList.toggle('fa-times');
-        }
-      });
+</div>
 
-      document.querySelectorAll('#mobile-menu a').forEach((link) => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.remove('active');
-          const icon = menuBtn.querySelector('i');
-          if (icon) {
-            icon.classList.add('fa-bars');
-            icon.classList.remove('fa-times');
-          }
-        });
-      });
-    }
-  </script>
+<div class="col-lg-6 col-md-6 col-sm-12 text-center img">
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"
-  ></script>
+<img
+src="image/contactBack.png"
+alt="Tony Byamungu biomedical portfolio"
+class="img-fluid">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MEDICAL SEO SECTION -->
+
+<section class="py-5 bg-light text-dark">
+
+<div class="container">
+
+<h2 class="text-center mb-4">
+
+Medical Equipment Services in Kolwezi & Lubumbashi
+
+</h2>
+
+<p class="text-center mb-5">
+
+<strong>Med Repair</strong> provides biomedical repair,
+preventive maintenance, installation and calibration
+services for hospitals, clinics and laboratories.
+
+Our goal is to reduce equipment downtime,
+increase reliability and support safe patient care.
+
+</p>
+
+<div class="row">
+
+<div class="col-md-6 mb-4">
+
+<div class="card shadow-sm h-100">
+
+<div class="card-body">
+
+<h4>
+
+Biomedical Repair Services in Kolwezi
+
+</h4>
+
+<p>
+
+We support healthcare facilities in Kolwezi with
+expert diagnosis, repair, installation and
+preventive maintenance of patient monitors,
+ICU systems, sterilization units and laboratory equipment.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-6 mb-4">
+
+<div class="card shadow-sm h-100">
+
+<div class="card-body">
+
+<h4>
+
+Medical Equipment Maintenance in Lubumbashi
+
+</h4>
+
+<p>
+
+In Lubumbashi we deliver structured preventive
+maintenance programs and rapid technical intervention
+to minimize breakdowns and extend equipment lifespan.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="text-center mt-4">
+
+<p class="mb-3">
+
+Need urgent repair or long-term maintenance support?
+
+</p>
+
+<a
+href="#contact"
+class="btn btn-dark btn-lg">
+
+Request Technical Support
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer id="footer"></footer>
+
+<!-- WhatsApp -->
+
+<a
+href="https://wa.me/243979255850"
+target="_blank"
+class="whatsapp-float">
+
+<i class="fab fa-whatsapp"></i> WhatsApp
+
+</a>
+
+<!-- jQuery -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+
+$(function(){
+
+$("#header").load("headernav.html");
+$("#footer").load("footer.html");
+
+});
+
+</script>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
 </body>
 </html>
